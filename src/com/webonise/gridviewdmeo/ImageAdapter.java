@@ -1,14 +1,16 @@
 package com.webonise.gridviewdmeo;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
-public class ImageAdapter extends BaseAdapter {
+public class ImageAdapter extends BaseAdapter implements OnClickListener {
 	Context mContext;
 	private int[] images = { R.drawable.image1, R.drawable.image2,
 			R.drawable.image3, R.drawable.image4, R.drawable.image5,
@@ -43,6 +45,14 @@ public class ImageAdapter extends BaseAdapter {
 		View view = inflater.inflate(R.layout.gallary_item, null);
 		ImageView imageView = (ImageView) view.findViewById(R.id.imageViewItem);
 		CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkBoxItem);
+		checkBox.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Log.v(null,  "");
+				
+			}
+		});
 		imageView.setImageResource(images[position]);
 		return view;
 	}
