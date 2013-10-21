@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
-public class ImageAdapter extends BaseAdapter implements OnClickListener {
+public class ImageAdapter extends BaseAdapter {
 	Context mContext;
 	private int[] images = { R.drawable.image1, R.drawable.image2,
 			R.drawable.image3, R.drawable.image4, R.drawable.image5,
