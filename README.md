@@ -1,2 +1,1 @@
-Android-GallaryViewDemo
-=======================
+Android GridView image Selector
